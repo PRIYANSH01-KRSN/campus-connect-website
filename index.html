@@ -11,16 +11,14 @@
   <link rel="canonical" href="https://carrermargg.netlify.app/" />
 
   <!-- Favicon / Google console inline icon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'></rect><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='50' font-family='Arial,sans-serif' font-weight='bold' fill='white'>CM</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'></rect><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='50' font-family='Arial,sans-serif' font-weight='bold' fill='white'>CM</text></svg>'">
 
-  <!-- Open Graph -->
+  <!-- OG/Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CareerMargg — 1:1 Mentorship for Engineering Students" />
   <meta property="og:description" content="Pick your problem (DSA, Web, Embedded/IoT, Resume & GitHub). We help you choose the right path and execute with clarity." />
   <meta property="og:url" content="https://carrermargg.netlify.app/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CareerMargg — 1:1 Mentorship for Engineering Students" />
   <meta name="twitter:description" content="Clear direction, skill plan, internship roadmap. WhatsApp-first support." />
@@ -61,8 +59,6 @@
       --bg:#f7f7f8;--card:#fff;--ink:#0b0b0c;--muted:#545b6c;--line:#ececf1;
       --brand:#111;--accent:#16a34a;--radius:22px;--shadow:0 18px 40px rgba(0,0,0,.08);
       --max:1120px;
-
-      /* Fluid type scales */
       --h1: clamp(28px, 6vw, 56px);
       --h2: clamp(22px, 3.8vw, 42px);
       --text: clamp(15px, 1.7vw, 17.5px);
@@ -85,25 +81,20 @@
     .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     @media(max-width:1024px){.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:860px){.cols-2{grid-template-columns:1fr}.cols-3{grid-template-columns:1fr}}
-
     .section{padding:68px 0}
     .title{font-size:var(--h2);line-height:1.15;letter-spacing:-.02em;margin:0}
     .subtitle{margin-top:8px;color:var(--muted)}
     .pill{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:700}
     .price-pill{padding:6px 12px;border-radius:999px;background:#111;color:#fff;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.15)}
-
     /* nav */
     .nav{position:sticky;top:0;z-index:50;background:#fffE;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
     .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800}
     .brand-mark{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:12px;background:#111;color:#fff}
-
     .menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:700}
     .nav-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .nav-links a{padding:8px 10px;border-radius:10px;font-weight:600}
     .nav-links a.active,.nav-links a:hover{background:#f2f2f3}
-
-    /* mobile menu */
     @media(max-width:860px){
       .menu-btn{display:inline-flex}
       .nav-links{display:none;width:100%;margin-top:10px}
@@ -111,10 +102,7 @@
       .nav.open .nav-links a{background:#f7f7f8;border:1px solid var(--line)}
       .nav-inner{flex-wrap:wrap}
     }
-    @media(max-width:460px){
-      .nav.open .nav-links{grid-template-columns:1fr}
-    }
-
+    @media(max-width:460px){.nav.open .nav-links{grid-template-columns:1fr}}
     /* hero */
     .hero{padding:64px 0;background:radial-gradient(1200px 500px at 50% -50px,#ececf1,#fff)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
@@ -123,45 +111,25 @@
     .lead{margin-top:10px;color:var(--muted);font-size:var(--lead)}
     .hero-cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
     .hero img{width:76%;margin-left:auto;box-shadow:0 24px 60px rgba(0,0,0,.12)}
-    @media(max-width:860px){
-      .hero-grid{grid-template-columns:1fr}
-      .hero img{width:100%;margin:18px 0 0 0}
-      .hero-cta .btn{flex:1 1 180px}
-    }
-
+    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero img{width:100%;margin:18px 0 0 0}.hero-cta .btn{flex:1 1 180px}}
     /* lists */
     ul{padding-left:20px}
     .list-emoji li{margin-bottom:8px}
     .pos-list li::marker{color:#22c55e}
     .neg-list li::marker{color:#ef4444}
-
-    /* big form */
+    /* forms */
     .form-wide{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
     .form-wide .full{grid-column:1 / -1}
     input,textarea{width:100%;padding:15px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;outline:none;font-size:16px}
     textarea{min-height:140px}
     input:focus,textarea:focus{border-color:#111;box-shadow:0 0 0 4px rgba(17,17,17,.06)}
     @media(max-width:720px){.form-wide{grid-template-columns:1fr}}
-
-    /* perfect-for card (fills empty space) */
-    .perfect-card{
-      padding:22px;
-      background: radial-gradient(600px 300px at 100% 0, #eefdf3, #ffffff);
-      position: relative;
-      overflow: hidden;
-      min-height: 280px;
-    }
-    .perfect-list{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:10px 22px;
-    }
-    .perfect-list li{margin: 0 0 6px 0}
-    @media (max-width: 900px){
-      .perfect-list{grid-template-columns:1fr}
-      .perfect-card{min-height:auto}
-    }
-
+    /* perfect-for */
+    .perfect-card{padding:22px;background: radial-gradient(600px 300px at 100% 0, #eefdf3, #ffffff);position: relative;overflow: hidden}
+    .perfect-list{display:grid;grid-template-columns: repeat(2, minmax(0,1fr));gap:10px 22px}
+    .perfect-list li{margin:0 0 6px 0}
+    @media (max-width: 900px){.perfect-list{grid-template-columns:1fr}}
+    /* footer */
     footer{border-top:1px solid var(--line);background:#fff}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;padding:32px 0}
     @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
@@ -198,7 +166,8 @@
         <div class="hero-cta">
           <a href="#program" class="btn">See the Program</a>
           <a href="#contact" class="btn primary">Book Session</a>
-          <button class="btn" id="whatsappBtn">Chat on WhatsApp</button>
+          <!-- WhatsApp now a real link -->
+          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I%20want%20to%20know%20about%20the%20mentorship%20program.">Chat on WhatsApp</a>
         </div>
       </div>
       <div>
@@ -208,7 +177,6 @@
   </section>
 </main>
 
-<!-- Problems -->
 <section id="struggle" class="section">
   <div class="container">
     <h2 class="title">Are you struggling with:</h2>
@@ -234,7 +202,6 @@
   </div>
 </section>
 
-<!-- Program -->
 <section id="program" class="section">
   <div class="container">
     <div class="grid cols-2">
@@ -255,12 +222,10 @@
           </ul>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a href="#contact" class="btn primary">Book Now</a>
-            <button class="btn" id="chooseWA">Ask which focus suits me</button>
+            <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Which%20focus%20area%20should%20I%20choose%3F">Ask which focus suits me</a>
           </div>
         </div>
       </div>
-
-      <!-- Perfect for -->
       <div class="card perfect-card">
         <h3>Perfect for</h3>
         <ul class="perfect-list">
@@ -274,7 +239,6 @@
   </div>
 </section>
 
-<!-- Mentors -->
 <section id="mentors" class="section">
   <div class="container">
     <h2 class="title">About the mentors</h2>
@@ -306,7 +270,6 @@
   </div>
 </section>
 
-<!-- Pricing -->
 <section id="pricing" class="section" style="background:#f1f3f5">
   <div class="container">
     <h2 class="title">Simple, student-friendly price</h2>
@@ -322,19 +285,18 @@
         <h3>WhatsApp-first</h3>
         <p class="muted">Prefer chat before booking?</p>
         <div class="big">Tap below</div>
-        <button class="btn" id="waPricing">Chat on WhatsApp</button>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I%20want%20to%20chat%20before%20booking.">Chat on WhatsApp</a>
       </div>
       <div class="card" style="padding:22px">
         <h3>College / Group</h3>
         <p class="muted">Workshops or small cohorts</p>
         <div class="big">Custom</div>
-        <button class="btn" id="waGroup">Discuss</button>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20Can%20we%20discuss%20a%20group%2Fcollege%20workshop%3F">Discuss</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Reviews -->
 <section id="reviews" class="section">
   <div class="container">
     <h2 class="title">Student reviews</h2>
@@ -367,7 +329,6 @@
   </div>
 </section>
 
-<!-- Contact / Booking -->
 <section id="contact" class="section">
   <div class="container">
     <h2 class="title">Book your 1:1 session</h2>
@@ -386,12 +347,10 @@
         <input type="text" name="_gotcha" style="display:none" />
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
           <button type="submit" class="btn primary">Submit Booking</button>
-          <button type="button" class="btn" id="bookWhatsApp">Or Book via WhatsApp</button>
+          <!-- WhatsApp booking link -->
+          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I'd%20like%20to%20book%20a%20session.%20Here's%20my%20situation%3A%20_____">Or Book via WhatsApp</a>
         </div>
       </form>
 
       <div class="card" style="padding:22px">
-        <h3>Prefer chatting first?</h3>
-        <p class="muted">Ask anything about focus, mentor fit, or outcomes:</p>
-        <button class="btn block" id="waQuick">WhatsApp: Ask a Question</button>
-        
+        <h3>Prefer chatt
