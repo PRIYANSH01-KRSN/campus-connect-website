@@ -10,7 +10,7 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://carrermargg.netlify.app/" />
 
-  <!-- Your favicon/verification from Google Console -->
+  <!-- Favicon / Google console inline icon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'></rect><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='50' font-family='Arial,sans-serif' font-weight='bold' fill='white'>CM</text></svg>">
 
   <!-- Open Graph -->
@@ -18,7 +18,6 @@
   <meta property="og:title" content="CareerMargg — 1:1 Mentorship for Engineering Students" />
   <meta property="og:description" content="Pick your problem (DSA, Web, Embedded/IoT, Resume & GitHub). We help you choose the right path and execute with clarity." />
   <meta property="og:url" content="https://carrermargg.netlify.app/" />
-  <!-- If you host a real image later, replace with that URL -->
   <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" />
 
   <!-- Twitter -->
@@ -27,7 +26,7 @@
   <meta name="twitter:description" content="Clear direction, skill plan, internship roadmap. WhatsApp-first support." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" />
 
-  <!-- JSON-LD: Organization + Offer -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -61,49 +60,77 @@
     :root{
       --bg:#f7f7f8;--card:#fff;--ink:#0b0b0c;--muted:#545b6c;--line:#ececf1;
       --brand:#111;--accent:#16a34a;--radius:22px;--shadow:0 18px 40px rgba(0,0,0,.08);
-      --max:1120px
+      --max:1120px;
+
+      /* Fluid type scales */
+      --h1: clamp(28px, 6vw, 56px);
+      --h2: clamp(22px, 3.8vw, 42px);
+      --text: clamp(15px, 1.7vw, 17.5px);
+      --lead: clamp(15px, 2vw, 18px);
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:17.5px;line-height:1.7}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:var(--text);line-height:1.7}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block;border-radius:18px}
-    .container{max-width:var(--max);margin:0 auto;padding:0 16px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:14px;border:1px solid var(--line);background:var(--card);font-weight:700;cursor:pointer;transition:.2s}
     .btn:hover{transform:translateY(-1px)}
     .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn.block{width:100%}
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     .muted{color:var(--muted)}
     .grid{display:grid;gap:22px}
     .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
     .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media(max-width:960px){.cols-2,.cols-3{grid-template-columns:1fr}}
+    @media(max-width:1024px){.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:860px){.cols-2{grid-template-columns:1fr}.cols-3{grid-template-columns:1fr}}
+
     .section{padding:68px 0}
-    .title{font-size:42px;line-height:1.12;letter-spacing:-.02em;margin:0}
+    .title{font-size:var(--h2);line-height:1.15;letter-spacing:-.02em;margin:0}
     .subtitle{margin-top:8px;color:var(--muted)}
     .pill{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:700}
     .price-pill{padding:6px 12px;border-radius:999px;background:#111;color:#fff;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.15)}
 
     /* nav */
     .nav{position:sticky;top:0;z-index:50;background:#fffE;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800}
     .brand-mark{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:12px;background:#111;color:#fff}
-    .nav-links{display:flex;gap:16px;align-items:center}
+
+    .menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:700}
+    .nav-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .nav-links a{padding:8px 10px;border-radius:10px;font-weight:600}
     .nav-links a.active,.nav-links a:hover{background:#f2f2f3}
 
+    /* mobile menu */
+    @media(max-width:860px){
+      .menu-btn{display:inline-flex}
+      .nav-links{display:none;width:100%;margin-top:10px}
+      .nav.open .nav-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .nav.open .nav-links a{background:#f7f7f8;border:1px solid var(--line)}
+      .nav-inner{flex-wrap:wrap}
+    }
+    @media(max-width:460px){
+      .nav.open .nav-links{grid-template-columns:1fr}
+    }
+
     /* hero */
-    .hero{padding:76px 0;background:radial-gradient(1200px 500px at 50% -50px,#ececf1,#fff)}
+    .hero{padding:64px 0;background:radial-gradient(1200px 500px at 50% -50px,#ececf1,#fff)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
-    @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
-    .hero h1{font-size:56px;line-height:1.05;margin:0}
+    .hero h1{font-size:var(--h1);line-height:1.06;margin:0}
     .underline{text-decoration:underline;text-decoration-thickness:6px;text-decoration-color:#22c55e}
-    .lead{margin-top:10px;color:var(--muted);font-size:18px}
+    .lead{margin-top:10px;color:var(--muted);font-size:var(--lead)}
     .hero-cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
     .hero img{width:76%;margin-left:auto;box-shadow:0 24px 60px rgba(0,0,0,.12)}
+    @media(max-width:860px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero img{width:100%;margin:18px 0 0 0}
+      .hero-cta .btn{flex:1 1 180px}
+    }
 
     /* lists */
-    ul{padding-left:24px}
+    ul{padding-left:20px}
     .list-emoji li{margin-bottom:8px}
     .pos-list li::marker{color:#22c55e}
     .neg-list li::marker{color:#ef4444}
@@ -116,7 +143,7 @@
     input:focus,textarea:focus{border-color:#111;box-shadow:0 0 0 4px rgba(17,17,17,.06)}
     @media(max-width:720px){.form-wide{grid-template-columns:1fr}}
 
-    /* perfect-for card enhancements */
+    /* perfect-for card (fills empty space) */
     .perfect-card{
       padding:22px;
       background: radial-gradient(600px 300px at 100% 0, #eefdf3, #ffffff);
@@ -137,16 +164,17 @@
 
     footer{border-top:1px solid var(--line);background:#fff}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;padding:32px 0}
-    @media(max-width:960px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
     .floating-wa{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;padding:14px 16px;border-radius:999px;font-weight:800;box-shadow:var(--shadow)}
+    @media(max-width:520px){.floating-wa{right:12px;bottom:12px}}
   </style>
 </head>
 <body>
-<header class="nav">
+<header class="nav" id="nav">
   <div class="container nav-inner">
-    <!-- brand logo now links to top -->
     <a class="brand" href="#home"><span class="brand-mark">CM</span><span>CareerMargg</span></a>
+    <button class="menu-btn" id="menuBtn">Menu</button>
     <nav class="nav-links">
       <a href="#home">Home</a>
       <a href="#struggle">Problems</a>
@@ -232,7 +260,7 @@
         </div>
       </div>
 
-      <!-- Perfect for (no more empty white space) -->
+      <!-- Perfect for -->
       <div class="card perfect-card">
         <h3>Perfect for</h3>
         <ul class="perfect-list">
@@ -365,84 +393,5 @@
       <div class="card" style="padding:22px">
         <h3>Prefer chatting first?</h3>
         <p class="muted">Ask anything about focus, mentor fit, or outcomes:</p>
-        <button class="btn" id="waQuick">WhatsApp: Ask a Question</button>
-        <div style="height:12px"></div>
-        <h3>How it works</h3>
-        <ol class="muted">
-          <li>We confirm your slot on WhatsApp.</li>
-          <li>Short intake so we understand your situation.</li>
-          <li>Meet on Google Meet or Zoom.</li>
-          <li>Continue on WhatsApp if you need quick clarifications.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <a class="brand" href="#home"><span class="brand-mark">CM</span><span>CareerMargg</span></a>
-      <p class="muted">1:1 technical mentorship for engineering students. Pick your focus. Get moving.</p>
-    </div>
-    <div>
-      <h4>Quick links</h4>
-      <div class="muted">
-        <div><a href="#struggle">Problems</a></div>
-        <div><a href="#program">Program</a></div>
-        <div><a href="#mentors">Mentors</a></div>
-        <div><a href="#pricing">Pricing</a></div>
-        <div><a href="#reviews">Reviews</a></div>
-        <div><a href="#faq">FAQ</a></div>
-      </div>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <div class="muted">
-        <div><a href="#" id="waFooter">WhatsApp</a></div>
-        <div><a href="https://www.linkedin.com/in/shalini-kumari-221b27283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noreferrer">Mentor LinkedIn</a></div>
-      </div>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <div class="muted">
-        <div><a href="#">Terms</a></div>
-        <div><a href="#">Privacy</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="container" style="padding-bottom:28px;font-size:12px;color:var(--muted)">© <span id="year"></span> CareerMargg. All rights reserved.</div>
-</footer>
-
-<a class="floating-wa" id="floatingWA" href="#">WhatsApp</a>
-
-<script>
-  const WHATSAPP_NUMBER = "9351619890";
-  const WA_DIGITS = WHATSAPP_NUMBER.replace(/[^0-9]/g,"");
-  function openWhatsApp(message){
-    const url = `https://wa.me/${WA_DIGITS}${message?`?text=${encodeURIComponent(message)}`:''}`;
-    window.open(url,'_blank');
-  }
-  const sections = ["home","struggle","program","mentors","pricing","reviews","faq","contact"];
-  const links = document.querySelectorAll(".nav-links a");
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if(!el) return;
-      if (pageYOffset >= el.offsetTop - 120) current = id;
-    });
-    links.forEach(a => a.classList.toggle("active", a.getAttribute("href")==="#"+current));
-  });
-  document.getElementById("whatsappBtn").onclick = () => openWhatsApp("Hi! I want to know about the mentorship program.");
-  document.getElementById("chooseWA").onclick = () => openWhatsApp("Which focus area should I choose?");
-  document.getElementById("waPricing").onclick = () => openWhatsApp("Hi! I want to chat before booking.");
-  document.getElementById("waGroup").onclick = () => openWhatsApp("Hi! Can we discuss a group/college workshop?");
-  document.getElementById("waQuick").onclick = () => openWhatsApp("I have a question about the program.");
-  document.getElementById("waFooter").onclick = (e) => { e.preventDefault(); openWhatsApp("Hi!"); };
-  const bookWA = document.getElementById("bookWhatsApp");
-  if (bookWA) bookWA.onclick = () => openWhatsApp("Hi! I'd like to book a session. Here's my situation: _____");
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+        <button class="btn block" id="waQuick">WhatsApp: Ask a Question</button>
+        
