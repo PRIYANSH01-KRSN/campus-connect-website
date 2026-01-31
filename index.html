@@ -1,356 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CareerMargg — 1:1 Technical Mentorship for Engineering Students</title>
-  <meta name="description" content="CareerMargg helps engineering students go from confused to confident with 1:1 mentorship. Get clear direction, better study techniques, a step-by-step skill plan, and an internship roadmap. WhatsApp-first support." />
-  <meta name="keywords" content="engineering students mentorship, DSA roadmap, web development mentorship, embedded IoT projects, resume LinkedIn GitHub review, internship roadmap India, CareerMargg" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://carrermargg.netlify.app/" />
+  <title>Career Guidance for 1st-Year Engineering Students | Neevly</title>
+  <meta name="description" content="Neevly provides free resources, clarity calls, and semester roadmaps for confused 1st-year engineering students. Direction before distraction." />
+  <meta name="keywords" content="career guidance for 1st year engineering students, engineering roadmap for beginners, cgpa tips, time management engineering college" />
 
-  <!-- Favicon / Google console inline icon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'></rect><text y='50%' x='50%' dominant-baseline='central' text-anchor='middle' font-size='50' font-family='Arial,sans-serif' font-weight='bold' fill='white'>CM</text></svg>'">
-
-  <!-- OG/Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CareerMargg — 1:1 Mentorship for Engineering Students" />
-  <meta property="og:description" content="Pick your problem (DSA, Web, Embedded/IoT, Resume & GitHub). We help you choose the right path and execute with clarity." />
-  <meta property="og:url" content="https://carrermargg.netlify.app/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CareerMargg — 1:1 Mentorship for Engineering Students" />
-  <meta name="twitter:description" content="Clear direction, skill plan, internship roadmap. WhatsApp-first support." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"CareerMargg",
-    "url":"https://carrermargg.netlify.app/",
-    "logo":"https://carrermargg.netlify.app/logo.png",
-    "sameAs":["https://www.linkedin.com/in/shalini-kumari-221b27283"],
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer support",
-      "telephone":"+91-9351619890",
-      "areaServed":"IN"
-    }],
-    "makesOffer":{
-      "@type":"Offer",
-      "name":"Personalized Technical Mentorship (60-min 1:1)",
-      "price":"199",
-      "priceCurrency":"INR",
-      "availability":"https://schema.org/InStock",
-      "url":"https://carrermargg.netlify.app/#contact"
-    }
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#f7f7f8;--card:#fff;--ink:#0b0b0c;--muted:#545b6c;--line:#ececf1;
-      --brand:#111;--accent:#16a34a;--radius:22px;--shadow:0 18px 40px rgba(0,0,0,.08);
-      --max:1120px;
-      --h1: clamp(28px, 6vw, 56px);
-      --h2: clamp(22px, 3.8vw, 42px);
-      --text: clamp(15px, 1.7vw, 17.5px);
-      --lead: clamp(15px, 2vw, 18px);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:var(--text);line-height:1.7}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block;border-radius:18px}
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:14px;border:1px solid var(--line);background:var(--card);font-weight:700;cursor:pointer;transition:.2s}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
-    .btn.block{width:100%}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:22px}
-    .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media(max-width:1024px){.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:860px){.cols-2{grid-template-columns:1fr}.cols-3{grid-template-columns:1fr}}
-    .section{padding:68px 0}
-    .title{font-size:var(--h2);line-height:1.15;letter-spacing:-.02em;margin:0}
-    .subtitle{margin-top:8px;color:var(--muted)}
-    .pill{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:700}
-    .price-pill{padding:6px 12px;border-radius:999px;background:#111;color:#fff;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.15)}
-    /* nav */
-    .nav{position:sticky;top:0;z-index:50;background:#fffE;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .brand-mark{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:12px;background:#111;color:#fff}
-    .menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:700}
-    .nav-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .nav-links a{padding:8px 10px;border-radius:10px;font-weight:600}
-    .nav-links a.active,.nav-links a:hover{background:#f2f2f3}
-    @media(max-width:860px){
-      .menu-btn{display:inline-flex}
-      .nav-links{display:none;width:100%;margin-top:10px}
-      .nav.open .nav-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-      .nav.open .nav-links a{background:#f7f7f8;border:1px solid var(--line)}
-      .nav-inner{flex-wrap:wrap}
-    }
-    @media(max-width:460px){.nav.open .nav-links{grid-template-columns:1fr}}
-    /* hero */
-    .hero{padding:64px 0;background:radial-gradient(1200px 500px at 50% -50px,#ececf1,#fff)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
-    .hero h1{font-size:var(--h1);line-height:1.06;margin:0}
-    .underline{text-decoration:underline;text-decoration-thickness:6px;text-decoration-color:#22c55e}
-    .lead{margin-top:10px;color:var(--muted);font-size:var(--lead)}
-    .hero-cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-    .hero img{width:76%;margin-left:auto;box-shadow:0 24px 60px rgba(0,0,0,.12)}
-    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero img{width:100%;margin:18px 0 0 0}.hero-cta .btn{flex:1 1 180px}}
-    /* lists */
-    ul{padding-left:20px}
-    .list-emoji li{margin-bottom:8px}
-    .pos-list li::marker{color:#22c55e}
-    .neg-list li::marker{color:#ef4444}
-    /* forms */
-    .form-wide{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-    .form-wide .full{grid-column:1 / -1}
-    input,textarea{width:100%;padding:15px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;outline:none;font-size:16px}
-    textarea{min-height:140px}
-    input:focus,textarea:focus{border-color:#111;box-shadow:0 0 0 4px rgba(17,17,17,.06)}
-    @media(max-width:720px){.form-wide{grid-template-columns:1fr}}
-    /* perfect-for */
-    .perfect-card{padding:22px;background: radial-gradient(600px 300px at 100% 0, #eefdf3, #ffffff);position: relative;overflow: hidden}
-    .perfect-list{display:grid;grid-template-columns: repeat(2, minmax(0,1fr));gap:10px 22px}
-    .perfect-list li{margin:0 0 6px 0}
-    @media (max-width: 900px){.perfect-list{grid-template-columns:1fr}}
-    /* footer */
-    footer{border-top:1px solid var(--line);background:#fff}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;padding:32px 0}
-    @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
-    .floating-wa{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;padding:14px 16px;border-radius:999px;font-weight:800;box-shadow:var(--shadow)}
-    @media(max-width:520px){.floating-wa{right:12px;bottom:12px}}
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-<header class="nav" id="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#home"><span class="brand-mark">CM</span><span>CareerMargg</span></a>
-    <button class="menu-btn" id="menuBtn">Menu</button>
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#struggle">Problems</a>
-      <a href="#program">Program</a>
-      <a href="#mentors">Mentors</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn primary">Book Session</a>
-    </nav>
-  </div>
-</header>
 
-<main id="home">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="pill">For Engineering Students • India 🇮🇳</span>
-        <h1>From <span class="underline">Confused</span> to <span class="underline">Confident</span> — with 1:1 technical mentorship.</h1>
-        <p class="lead">One focused program. Tell us your problem (DSA, Web, Embedded/IoT, Resume & GitHub). We help you pick the right path, avoid common mistakes, and move with clarity.</p>
-        <div class="hero-cta">
-          <a href="#program" class="btn">See the Program</a>
-          <a href="#contact" class="btn primary">Book Session</a>
-          <!-- WhatsApp now a real link -->
-          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I%20want%20to%20know%20about%20the%20mentorship%20program.">Chat on WhatsApp</a>
-        </div>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <a href="#top" class="brand">Neevly</a>
+      <span class="brand-tag">Direction before distraction</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#resources">Free Resources</a>
+      <a href="#services">Paid Support</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="hero-inner">
+      <h1>Career guidance for 1st-year engineering students</h1>
+      <p class="hero-sub">
+        Calm, honest direction to help you build your foundation early — before confusion turns into distraction.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn primary" href="#blogs">Read Free Guides</a>
+        <a class="btn secondary" href="#services">Get Personal Clarity</a>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Mentorship">
+
+      <div class="hero-badges">
+        <span>✅ Beginner-friendly</span>
+        <span>✅ No hype</span>
+        <span>✅ Clear roadmap</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- RESOURCES -->
+  <section id="resources" class="section">
+    <div class="container">
+      <h2>Start here (Free resources)</h2>
+      <p class="section-sub">
+        If you're confused in your first year, you’re not alone. These resources are designed to give clarity — not overload.
+      </p>
+
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>What you’ll learn here</h3>
+          <ul class="list">
+            <li>What to focus on in first year</li>
+            <li>How to study smarter, not harder</li>
+            <li>How to handle CGPA pressure</li>
+            <li>How to manage time without burnout</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h3>Topics coming next</h3>
+          <ul class="list">
+            <li>Should you join clubs in college?</li>
+            <li>How to build skills in first year</li>
+            <li>How to recover from a bad semester</li>
+            <li>Career options after engineering</li>
+          </ul>
+          <p class="muted small">New resources published regularly.</p>
+        </div>
       </div>
     </div>
   </section>
-</main>
 
-<section id="struggle" class="section">
-  <div class="container">
-    <h2 class="title">Are you struggling with:</h2>
-    <div class="grid cols-2">
-      <ul class="card list-emoji neg-list" style="padding:22px">
-        <li>❌ Confused which option to pick? (CS: Python, Java, C++? ECE: IoT, Embedded, VLSI?)</li>
-        <li>❌ Studying hard but grades not improving?</li>
-        <li>❌ Want to learn new skills but don’t know where to start?</li>
-        <li>❌ Dream of landing internships at top companies or IITs but don’t know HOW to get selected?</li>
-      </ul>
-      <div class="card" style="padding:22px">
-        <p class="muted"><em>You're not alone.</em> 😔 Most students waste YEARS figuring this out...</p>
-        <p><b>But what if you could get:</b></p>
-        <ul class="list-emoji pos-list">
-          <li>✅ Clear career direction based on <b>your strengths</b></li>
-          <li>✅ Proven study techniques for <b>better grades</b></li>
-          <li>✅ Step-by-step <b>skill development plan</b></li>
-          <li>✅ A realistic <b>internship roadmap</b> for top companies & IITs</li>
-          <li>✅ <b>Personal mentorship</b> & support</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- SERVICES -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <h2>Paid support (when you want personal clarity)</h2>
+      <p class="section-sub">
+        Free content gives direction. Paid support gives <strong>your</strong> direction — personalized and calm.
+      </p>
 
-<section id="program" class="section">
-  <div class="container">
-    <div class="grid cols-2">
-      <div>
-        <h2 class="title">Personalized Technical Mentorship</h2>
-        <p class="subtitle">One program. You bring the problem — we help you pick a path and execute smarter.</p>
-        <div class="card" style="padding:22px">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center">
-            <h3 style="margin:0">What we solve (pick your focus)</h3>
-            <span class="price-pill">₹199 / 60-min</span>
-          </div>
-          <ul class="list-emoji pos-list" style="margin-top:10px">
-            <li>✅ <b>Clear career direction</b> — map choices to your strengths & interest</li>
-            <li>✅ <b>Study technique upgrade</b> — simple systems that actually improve grades</li>
-            <li>✅ <b>Step-by-step skill plan</b> — focused 2–4 week plan you can finish</li>
-            <li>✅ <b>Internship roadmap</b> — projects, profile, and outreach that get replies</li>
-            <li>✅ <b>Personal mentorship</b> — WhatsApp-first guidance & accountability</li>
+      <div class="pricing">
+        <!-- Plan 1 -->
+        <article class="card">
+          <h3>30-Day Foundation Roadmap</h3>
+          <p class="muted">Personalized written roadmap (1st semester focus)</p>
+          <div class="price">₹99</div>
+          <ul class="list small">
+            <li>Phase 1: First 2 months (immediate)</li>
+            <li>Phase 2: Next 2 months (after 60 days)</li>
+            <li>Simple & beginner-friendly</li>
           </ul>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a href="#contact" class="btn primary">Book Now</a>
-            <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Which%20focus%20area%20should%20I%20choose%3F">Ask which focus suits me</a>
-          </div>
-        </div>
-      </div>
-      <div class="card perfect-card">
-        <h3>Perfect for</h3>
-        <ul class="perfect-list">
-          <li>Students stuck choosing between DSA, Web, or Embedded</li>
-          <li>Those who start many tutorials but struggle to finish a skill</li>
-          <li>Tier-2/3 college students seeking practical guidance</li>
-          <li>Anyone applying widely but not getting shortlists</li>
-        </ul>
+          <a class="btn primary" href="./booking.html?plan=roadmap">Get Roadmap</a>
+
+        </article>
+
+        <!-- Plan 2 -->
+        <article class="card featured">
+          <div class="badge">Most Chosen</div>
+          <h3>Foundation Clarity Call</h3>
+          <p class="muted">60-minute 1-on-1 clarity session</p>
+          <div class="price">₹199</div>
+          <ul class="list small">
+            <li>Clear learning direction</li>
+            <li>What to do + what to ignore</li>
+            <li>Reduce confusion & stress</li>
+          </ul>
+         <a class="btn primary" href="./booking.html?plan=call">Book Call</a>
+
+
+        </article>
+
+        <!-- Plan 3 -->
+        <article class="card">
+          <h3>Call + Roadmap Bundle</h3>
+          <p class="muted">Complete foundation support</p>
+          <div class="price">₹399</div>
+          <ul class="list small">
+            <li>Clarity call + written roadmap</li>
+            <li>Best value for serious students</li>
+            <li>Build confidence early</li>
+          </ul>
+       <a class="btn primary" href="./booking.html?plan=bundle">Get Started</a>
+
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="mentors" class="section">
-  <div class="container">
-    <h2 class="title">About the mentors</h2>
-    <p class="subtitle">Top-tier engineering background with hands-on internships at leading consultancies. We focus on practical steps and industry habits.</p>
-    <div class="grid cols-3">
-      <div class="card" style="padding:20px">
-        <h3 style="margin:0 0 6px 0">Qualifications</h3>
-        <ul class="muted">
-          <li>Software development internships (consultancies / product teams)</li>
-          <li>Strong CS fundamentals (DSA, OOP, OS)</li>
-          <li>ECE/Embedded project experience (ESP32/Arduino)</li>
-        </ul>
-      </div>
-      <div class="card" style="padding:20px">
-        <h3 style="margin:0 0 6px 0">Skills Coverage</h3>
-        <ul class="muted">
-          <li>Full-Stack Basics: React, Node, MongoDB</li>
-          <li>Core CS: Java/C++ foundations, DSA patterns</li>
-          <li>Web: HTML, CSS, Tailwind</li>
-          <li>Profile polishing: Resume, LinkedIn, GitHub</li>
-        </ul>
-      </div>
-      <div class="card" style="padding:20px">
-        <h3 style="margin:0 0 10px 0">Verify</h3>
-        <p class="muted" style="margin:0 0 8px 0">Prefer to check a mentor profile?</p>
-        <p style="margin:0"><a class="btn" href="https://www.linkedin.com/in/shalini-kumari-221b27283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noreferrer">View LinkedIn</a></p>
+  <!-- BLOGS -->
+  <section id="blogs" class="section">
+    <div class="container">
+      <h2>Free blog resources</h2>
+      <p class="section-sub">Start with these 5 high-impact guides for first-year engineering students.</p>
+
+      <div class="blog-grid">
+        <a class="blog-card" href="blog/how-to-study-engineering.html">
+          <h3>How to Study Effectively in Engineering College (1st Year)</h3>
+          <p>Build strong study habits early without burnout.</p>
+        </a>
+
+        <a class="blog-card" href="blog/cgpa-below-8.html">
+          <h3>What If Your First Semester CGPA Is Below 8?</h3>
+          <p>Don’t panic. Here’s the calm way to recover.</p>
+        </a>
+
+        <a class="blog-card" href="blog/cgpa-importance.html">
+          <h3>Is CGPA Really Important in Engineering?</h3>
+          <p>What matters, what doesn’t, and the balanced truth.</p>
+        </a>
+
+        <a class="blog-card" href="blog/time-management-engineering.html">
+          <h3>How to Manage Time in Engineering College Without Stress</h3>
+          <p>Simple time management that actually works.</p>
+        </a>
+
+        <a class="blog-card" href="blog/skills-vs-cgpa.html">
+          <h3>Skills vs CGPA: What Matters More in Engineering?</h3>
+          <p>The real answer students need in first year.</p>
+
+        <a class="blog-card" href="blog/Why Most Students Struggle in First Year Engineering.html">
+          <h3>Why Most Students Struggle in First Year Engineering?</h3>
+          <p>Reason which can't be neglect.</p>
+
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="pricing" class="section" style="background:#f1f3f5">
-  <div class="container">
-    <h2 class="title">Simple, student-friendly price</h2>
-    <p class="subtitle">Pay for practical clarity and next steps.</p>
-    <div class="grid cols-3">
-      <div class="card" style="padding:22px;border:2px solid var(--brand)">
-        <h3>Personalized Technical Mentorship</h3>
-        <p class="muted">60-min 1:1 • your focus</p>
-        <div class="big" style="font-size:34px;font-weight:800">₹199</div>
-        <a href="#contact" class="btn primary" style="margin-top:10px">Book Now</a>
-      </div>
-      <div class="card" style="padding:22px">
-        <h3>WhatsApp-first</h3>
-        <p class="muted">Prefer chat before booking?</p>
-        <div class="big">Tap below</div>
-        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I%20want%20to%20chat%20before%20booking.">Chat on WhatsApp</a>
-      </div>
-      <div class="card" style="padding:22px">
-        <h3>College / Group</h3>
-        <p class="muted">Workshops or small cohorts</p>
-        <div class="big">Custom</div>
-        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20Can%20we%20discuss%20a%20group%2Fcollege%20workshop%3F">Discuss</a>
-      </div>
+ 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Neevly</strong> — Direction before distraction</p>
+      <p class="muted small">© 2026 Neevly. Built for clarity, not hype.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="reviews" class="section">
-  <div class="container">
-    <h2 class="title">Student reviews</h2>
-    <p class="subtitle">Real experiences from students we’ve helped.</p>
-    <div class="grid cols-3" id="reviewGrid">
-      <div class="card" style="padding:18px">
-        <div style="display:inline-block;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:700;margin-bottom:8px">✅ Verified user</div>
-        <p><b>Priyansh</b> — “Stuck between DSA and Web. We picked a path and made a 2-week plan. Shipped my first React+Node project.”</p>
-      </div>
-      <div class="card" style="padding:18px">
-        <div style="display:inline-block;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:700;margin-bottom:8px">✅ Verified user</div>
-        <p><b>Shreya</b> — “Study technique + profile tweaks boosted my confidence and responses. Got callbacks the same week.”</p>
-      </div>
-      <div class="card" style="padding:18px">
-        <div style="display:inline-block;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:700;margin-bottom:8px">✅ Verified user</div>
-        <p><b>Raghav (ECE)</b> — “Clear ESP32 path with doable steps. Finished and presented it confidently in viva.”</p>
-      </div>
-    </div>
-
-    <div class="card" style="padding:22px;margin-top:22px">
-      <h3>Post your review</h3>
-      <form action="https://formspree.io/f/mldookll" method="POST" class="form-wide">
-        <input type="hidden" name="_subject" value="New Student Review (CareerMargg)" />
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="text" name="year_or_branch" placeholder="Year / Branch (optional)" />
-        <textarea class="full" name="message" rows="5" placeholder="Share your experience (what changed for you?)" required></textarea>
-        <button type="submit" class="btn">Submit review</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2 class="title">Book your 1:1 session</h2>
-    <p class="subtitle">We’ll confirm via WhatsApp after you submit.</p>
-    <div class="grid cols-2">
-      <form class="card" style="padding:22px" action="https://formspree.io/f/mldookll" method="POST">
-        <input type="hidden" name="_subject" value="New Mentorship Booking Request" />
-        <div class="form-wide">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="text" name="whatsapp" placeholder="WhatsApp Number" required />
-          <input class="full" type="email" name="email" placeholder="Email (optional)" />
-          <textarea class="full" name="needs" rows="6" placeholder="What do you need help with? (Describe your situation/problem in 1–3 lines)" required></textarea>
-          <input type="date" name="preferred_date" />
-          <input type="time" name="preferred_time" />
-        </div>
-        <input type="text" name="_gotcha" style="display:none" />
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-          <button type="submit" class="btn primary">Submit Booking</button>
-          <!-- WhatsApp booking link -->
-          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/9351619890?text=Hi!%20I'd%20like%20to%20book%20a%20session.%20Here's%20my%20situation%3A%20_____">Or Book via WhatsApp</a>
-        </div>
-      </form>
-
-      <div class="card" style="padding:22px">
-        <h3>Prefer chatt
+  <script src="script.js"></script>
+</body>
+</html>
